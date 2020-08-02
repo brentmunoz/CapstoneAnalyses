@@ -1,0 +1,19 @@
+/* Generated Code (IMPORT) */
+/* Source File: CapstoneData200713.xlsx */
+/* Source Path: /folders/myfolders/sasuser.v94/capstone */
+
+%web_drop_table(WORK.IMPORT);
+
+
+FILENAME REFFILE '/folders/myfolders/sasuser.v94/capstone/CapstoneData200713.xlsx';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=XLSX
+	OUT=WORK.IMPORT;
+	GETNAMES=YES;
+RUN;
+
+PROC CONTENTS DATA=WORK.IMPORT; RUN;
+
+
+%web_open_table(WORK.IMPORT);
